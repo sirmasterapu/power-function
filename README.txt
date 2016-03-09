@@ -1,3 +1,4 @@
 Author: Apurva Memani
 
-This programs takes a base and puts it to the power of your inputted exponent.
+This program asks the user for a base and an exponent. 
+This program is a function that can be implemented in future programs of your choosing.
