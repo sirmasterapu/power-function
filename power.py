@@ -1,5 +1,8 @@
 
 def power():
+
+	""" Will raise the base to the exponent """
+
 	count = 0
 	converted = False
 	base = 1
@@ -24,7 +27,7 @@ def power():
 		base = base * newBase
 		
 	print(base)		
-
+#######Calling Function#######
 power()
 		
 
