@@ -1,39 +1,41 @@
 
-def power():
+def power(base, exponent):
 
 	""" Will raise the base to the exponent """
 
 	count = 0
-	converted = False
 	base = 1
-	
-	while converted == False:
-		userBase = raw_input("Input the base of the number: ")
-		userExponent = raw_input("Input the exponent, greater than 0: ")
+			
+	while count < exponent:
+		count += 1
+		base = base * userBase
 		
+	return base	
+
+
+def float_input(prompt): 
+	"""Accepts a prompt for the user as a string. Returns answer as a float. Allows user 
+	to try again."""
+	
+	number = raw_input(prompt) 
+	notYetConverted = True
+	
+	while notYetConverted:
+	
 		try:
-			newBase = float(userBase)
-			newExponent = int(userExponent)
+			number= float(number)
 			
 		except ValueError:
-				print("not a number. try again. ")
-				
-		
-		else:
-			converted = True
+			number = raw_input("Sorry, that's not a number.Try again: ")
 			
-	while count < newExponent:
-		count += 1
-		base = base * newBase
+		else:
+			notYetConverted = False
+	return number 
+	
 		
-	print(base)		
 #######Calling Function#######
-power()
+userBase = float_input("Input the base of the number: ")
+userExponent = float_input("Input the exponent, greater than 0: ")
+endResult = power(userBase, userExponent)
+print("{} to the power of {} is {}.".format(userBase, userExponent, endResult))
 		
-
-
-
-
-
-
-
