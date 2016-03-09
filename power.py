@@ -1,26 +1,36 @@
 
-def power(base, exponent):
+def power():
 	count = 0
+	converted = False
+	base = 1
 	
-	while count < exponent:
-	
+	while converted == False:
+		userBase = raw_input("Input the base of the number: ")
+		userExponent = raw_input("Input the exponent, greater than 0: ")
+		
 		try:
-			base = float(base)
-			newBase = base * base
+			newBase = float(userBase)
+			newExponent = int(userExponent)
 			
 		except ValueError:
-			print("not a number")
+				print("not a number. try again. ")
+				
+		
+		else:
+			converted = True
 			
+	while count < newExponent:
 		count += 1
+		base = base * newBase
+		
+	print(base)		
 
-	return newBase
+power()
 		
 
 
 
 
-base = raw_input("Input the base of the number: ")
-exponent = raw_input("Input the exponent, greater than 0: ")
 
-output = power(base, exponent)
-print(ouput)
+
+
