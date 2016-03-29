@@ -4,13 +4,13 @@ def power(base, exponent):
 	""" Will raise the base to the exponent """
 
 	count = 0
-	base = 1
+	startingInteger = 1
 			
 	while count < exponent:
 		count += 1
-		base = base * userBase
+		startingInteger = startingInteger * base
 		
-	return base	
+	return startingInteger	
 
 
 def float_input(prompt): 
