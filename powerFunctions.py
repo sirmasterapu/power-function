@@ -10,8 +10,6 @@ def power(base, exponent):
 	
 	return output
 	
-		
-	return startingInteger	
 
 
 def float_input(prompt): 
